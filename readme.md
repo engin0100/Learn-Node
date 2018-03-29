@@ -6,3 +6,7 @@ Files already changed with some examples in the code.
 
 log 27.03.18
 starting core concepts with PUG Files - Templating
+
+log 29.03.2018
+Template helpers , helpers.js , moment.js. 
+
