@@ -22,4 +22,4 @@ extends layout
 //-     h2 yo!
 
 block content
-    p hello 
+    h2 Sale ends in #{h.moment().endOf('day').fromNow()}
