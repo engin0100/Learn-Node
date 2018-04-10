@@ -1,0 +1,12 @@
+extends layout
+
+include mixins/_storeForm
+
+block content
+    .inner
+        //- h2  you are on page #{title} //the way how u can also handle it if u want to add something to variable title 
+        //- if u only use the variable the better way
+        h2= title 
+        //- +storeForm({name: 'Engin Eser'}) if u want to add objects directly 
+        +storeForm()
+        

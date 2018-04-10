@@ -3,8 +3,10 @@ const router = express.Router();
 const storeController = require('../controllers/storeController');
 
 // Do work here
-router.get('/' , storeController.myMiddleware, storeController.homePage); // Controller inbound
-
+router.get('/' , storeController.homePage); // Controller inbound
+router.get('/add' , storeController.addStore); // Controller inbound
+router.post('/add', storeController.createStore);
+/* router.get('/' , storeController.myMiddleware, storeController.homePage); // Controller inbound */
 
 
 

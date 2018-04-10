@@ -1,0 +1,16 @@
+mixin storeForm(store = {})
+    //- p It works! #{store.name} text if it works and if it works also with obejects which has been defined in editstore
+    //- creation of Name fiel, description field, inlusive 5 option where u can make choices and denn a button save with POST Method!
+    form(action="/add" method="POST"  class="card")
+        label(for="name") Name
+        input(type="text" name="name")
+        label(for="description") Description
+        textarea(name="description")
+        - const choices = ['Wifi', 'Open Late', 'Familx Friendly', 'Vegatarian', 'Licensed']
+        ul.tags 
+            each choice in choices
+                .tag.tag__choice
+                    input(type="checkbox" id=choice value=choice name="tags")
+                    label(for=choice) #{choice}
+        input(type="submit" value="Save -<" class="button")
+
