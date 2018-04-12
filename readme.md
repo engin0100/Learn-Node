@@ -15,3 +15,8 @@ Module 3 completed -  database storage
 creating store model
 saving stores and using mixins
 
+log 11.04.2018
+Module 4 Part 1 
+Async await
+possibilty to save data in the database (mongodb)
+
