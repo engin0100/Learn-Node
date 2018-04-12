@@ -6,31 +6,34 @@
     }
     next();
 }; */
-const mongoose = require('mongoose');
-const Store = mongoose.model('Store');
-
+const mongoose = require("mongoose");
+const Store = mongoose.model("Store");
 
 exports.homePage = (req, res) => {
-    console.log(req.name);
-    res.render('index');    
+  console.log(req.name);
+  res.render("index");
 };
 
 // this is the controller
 
 exports.addStore = (req, res) => {
-    res.render('editStore', { title: 'Add Store'});
+  res.render("editStore", { title: "Add Store" });
 };
 
 exports.createStore = async (req, res) => {
-    // res.json(req.body);
-    const store = new Store(req.body);
-    await store.save();
-        //without async await!
-        // .then(store => {
-        //     res.json(store);
-        // })
-        // .catch(err => {
-        //     throw Error(err);
-        // })
-    res.redirect('/');
+  // res.json(req.body);
+  const store = await (new Store(req.body)).save();
+  await store.save();
+  //without async await!
+  // .then(store => {
+  //     res.json(store);
+  // })
+  // .catch(err => {
+  //     throw Error(err);
+  // })
+  req.flash(
+    "success",
+    `Successfully Created ${store.name}. Care to leave a review`
+  );
+  res.redirect(`/store/${store.slug}`);
 };

@@ -43,7 +43,7 @@ html
             - const categories = Object.keys(locals.flashes)
             each category in categories
               each message in flashes[category]
-                .flash(class=`flash--${category}`)
+                .flash(class=`flash--${category}`) 
                   p.flash__text!= message
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     .content
@@ -53,3 +53,7 @@ html
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
       script(src="/dist/App.bundle.js")
+
+
+<!-- pre= h.dump(locals) to see in browser als infos about variables -->
+<!-- p.flash__text != message ... is to can also use html in flashes for example that u can use strong tags -->
