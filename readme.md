@@ -25,3 +25,6 @@ Module 4 Part 2
 Flash Messages
 creating flash messages and store creation forwarding. 
 
+log 22.04.2018
+module 4 part 3 
+querying database for stores
