@@ -3,7 +3,8 @@ const router = express.Router();
 const storeController = require('../controllers/storeController');
 const { catchErrors } = require('../handlers/errorHandlers');
 // Do work here
-router.get('/' , storeController.homePage); // Controller inbound
+router.get('/' , catchErrors(storeController.getStores)); // Controller inbound
+router.get('/stores' , catchErrors(storeController.getStores));
 router.get('/add' , storeController.addStore); // Controller inbound
 router.post('/add', catchErrors(storeController.createStore));
 /* router.get('/' , storeController.myMiddleware, storeController.homePage); // Controller inbound */
