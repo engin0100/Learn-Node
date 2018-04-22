@@ -20,3 +20,8 @@ Module 4 Part 1
 Async await
 possibilty to save data in the database (mongodb)
 
+log 12.4.2018
+Module 4 Part 2 
+Flash Messages
+creating flash messages and store creation forwarding. 
+
