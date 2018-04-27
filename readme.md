@@ -28,3 +28,8 @@ creating flash messages and store creation forwarding.
 log 22.04.2018
 module 4 part 3 
 querying database for stores
+
+log 27.04.2018
+module 4 part 4
+creating an editing flow for stores
+add stores, edit stores and save changes, flash messages after changing, edit button icon
